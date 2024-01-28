@@ -12,6 +12,11 @@ function createGrid(size) {
         newBox.classList.add("box");
         const pxSize = 500 / size;
         newBox.style.width = pxSize + "px";
+
+        newBox.addEventListener("mouseover", function (e) {
+            newBox.style.backgroundColor = "black";
+        })
+
         boxesContainer.appendChild(newBox);
     }
 }
