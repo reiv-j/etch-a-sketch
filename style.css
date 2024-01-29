@@ -2,9 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .boxes-container {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     outline: 1px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -12,4 +19,9 @@
 
 .box {
     border: 1px solid black;
+}
+
+button {
+    padding: 4px 25px;
+    margin: 10px;
 }

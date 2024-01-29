@@ -9,12 +9,15 @@ button.addEventListener("click", function () {
 function createGrid(size) {
     if (size < 4 || size > 64) {
         alert("Size must be between 4 and 64");
+        return;
     }
+
+    boxesContainer.innerHTML = "";
 
     for (let i = 0; i < size*size; i++) {
         const newBox = document.createElement("div");
         newBox.classList.add("box");
-        const pxSize = 500 / size;
+        const pxSize = 600 / size;
         newBox.style.width = pxSize + "px";
 
         newBox.addEventListener("mouseover", function (e) {
@@ -25,3 +28,4 @@ function createGrid(size) {
     }
 }
 
+createGrid(16);
