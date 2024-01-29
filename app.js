@@ -1,5 +1,6 @@
 const boxesContainer = document.querySelector(".boxes-container");
 const button = document.querySelector("button");
+const sizeDisplay = document.querySelector("p");
 
 button.addEventListener("click", function () {
     const size = prompt("Please choose the size of the grid (4 - 32): ");
@@ -13,6 +14,7 @@ function createGrid(size) {
     }
 
     boxesContainer.innerHTML = "";
+    sizeDisplay.textContent = size + " x " + size;
 
     for (let i = 0; i < size*size; i++) {
         const newBox = document.createElement("div");
