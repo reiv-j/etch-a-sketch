@@ -7,6 +7,10 @@ button.addEventListener("click", function () {
 })
 
 function createGrid(size) {
+    if (size < 4 || size > 64) {
+        alert("Size must be between 4 and 64");
+    }
+
     for (let i = 0; i < size*size; i++) {
         const newBox = document.createElement("div");
         newBox.classList.add("box");
